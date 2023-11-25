@@ -81,9 +81,14 @@
     background: var(--white);
 
     .menu {
+      top: 62px;
+
       transform: translateY(0);
       opacity: 1;
       overflow: auto;
+      @media(min-width: 1024px){
+        top: 95px;
+      }
     }
   }
 

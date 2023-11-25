@@ -119,8 +119,10 @@ body {
 /* ------------------------ start container ------------------------ */
 
 .container {
+  width: 100%;
+  max-width: 1470px;
+  padding: 0 15px;
   margin: 0 auto;
-  width: min(calc(100% - 30px), 1440px);
 }
 .section {
   padding: 50px 0;
