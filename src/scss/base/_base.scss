@@ -1,0 +1,124 @@
+@use 'sass:math';
+
+/* ------------------------ start reset styles ------------------------ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input,
+button,
+textarea {
+  font-family: var(--font-family);
+  font-size: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+[type='checkbox'],
+[type='radio'] {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+[disabled],
+[disabled] * {
+  cursor: not-allowed;
+  user-select: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+svg {
+  display: block;
+}
+
+/* ------------------------ end reset styles ------------------------ */
+
+/* ------------------------ start base config ------------------------ */
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+
+  // Фикс для слайдеров
+  > * {
+    min-width: 0;
+    min-height: 0;
+  }
+}
+
+/* ------------------------ end base config ------------------------ */
+
+/* ------------------------ start container ------------------------ */
+
+.container {
+  margin: 0 auto;
+  width: min(calc(100% - 30px), 1440px);
+}
+
+/* ------------------------ end container ------------------------ */

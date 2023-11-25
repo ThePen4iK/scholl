@@ -1,0 +1,110 @@
+// -----------------------------------------------------------------------------
+// breakpoints
+
+@use 'sass:math';
+
+$breakpoints: (
+  xs: 375,
+  sm: 576,
+  md: 768,
+  lg: 992,
+  xl: 1200,
+  xxl: 1400
+);
+
+@mixin mq($width, $type: max) {
+  @if map_has_key($breakpoints, $width) {
+    $width: em(map_get($breakpoints, $width) - 0.2);
+
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// fonts
+
+/* stylelint-disable */
+@mixin font-face($font-family, $url, $weight, $style: normal) {
+  @font-face {
+    font-family: '#{$font-family}';
+
+    src:
+      url('../font/#{$url}.woff') format('woff'),
+      url('../font/#{$url}.woff2') format('woff2'),
+      url('../font/#{$url}.ttf') format('truetype');
+    font-weight: #{$weight};
+    font-display: swap;
+    font-style: $style;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// hover
+
+@mixin hover {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// images
+
+@mixin fill-image($type) {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: $type;
+}
+
+// -----------------------------------------------------------------------------
+// hide scroll
+@mixin hide-scroll {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// input placeholder
+
+@mixin input-placeholder {
+  &.placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// theme
+
+@mixin theme($theme) {
+  @if $theme == 'dark' {
+    html[data-theme='dark'] {
+      @content;
+    }
+  }
+
+  @if $theme == 'light' {
+    html[data-theme='light'] {
+      @content;
+    }
+  }
+}
