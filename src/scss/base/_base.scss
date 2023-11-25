@@ -87,6 +87,9 @@ svg {
 html {
   box-sizing: border-box;
   font-size: 100%;
+  &.block {
+    overflow: hidden;
+  }
 }
 
 html,
@@ -104,7 +107,6 @@ body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-
   // Фикс для слайдеров
   > * {
     min-width: 0;
@@ -120,5 +122,7 @@ body {
   margin: 0 auto;
   width: min(calc(100% - 30px), 1440px);
 }
-
+.section {
+  padding: 50px 0;
+}
 /* ------------------------ end container ------------------------ */
