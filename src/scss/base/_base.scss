@@ -73,7 +73,10 @@ input[type='number'] {
 
 img {
   display: block;
+  width: 100%;
   max-width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 svg {
@@ -116,8 +119,6 @@ body {
 
 /* ------------------------ end base config ------------------------ */
 
-/* ------------------------ start container ------------------------ */
-
 .container {
   width: 100%;
   max-width: 1470px;
@@ -126,5 +127,22 @@ body {
 }
 .section {
   padding: 50px 0;
+  @media(min-width: 1240px){
+    padding: 75px 0;
+  }
+  &:last-child {
+    padding-bottom:0;
+  }
 }
-/* ------------------------ end container ------------------------ */
+
+.title {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 38px;
+  color: var(--black);
+  @media(min-width: 1024px){
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 58px;
+  }
+}

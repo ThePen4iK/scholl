@@ -1,0 +1,162 @@
+.news {
+  &__inner {
+
+  }
+
+  &-head {
+    margin-bottom: 40px;
+
+    &__select {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 20px;
+      @media(min-width: 1240px) {
+        align-items: center;
+        flex-direction: row;
+        gap: 40px;
+        margin-top: 0;
+      }
+
+      &-title {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 19px;
+        color: var(--dark-grey);
+      }
+
+      .select {
+        width: 100%;
+        max-width: 339px;
+      }
+    }
+
+    @media(min-width: 1240px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+    }
+  }
+
+  &-tabs {
+    &.active {
+      .tabs-btn {
+        transition: all 0.3s ease;
+        background: var(--light-blue);
+        border-color: var(--light-blue);
+        color: var(--white);
+      }
+    }
+  }
+
+  &-content {
+
+  }
+
+  &-list {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(345px, 1fr));
+    gap: 20px;
+    @media(min-width: 1024px) {
+      gap: 30px;
+    }
+
+    &.show {
+      display: grid;
+    }
+  }
+
+  &-item {
+    border-radius: 15px;
+    background: var(--white);
+    box-shadow: 0 4px 15px 0 #00000026;
+
+    &__head {
+
+    }
+
+    &__img {
+      img {
+        border-radius: 15px 15px 0 0;
+      }
+    }
+
+    &__body {
+      padding: 20px;
+      @media(min-width: 1024px) {
+        padding: 30px;
+      }
+
+      a {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+        color: var(--black);
+
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        svg {
+          width: 24px;
+          height: 24px;
+          color: var(--blue);
+        }
+
+      }
+    }
+
+    &__wrapper {
+      margin-bottom: 20px;
+      @media(min-width: 1024px) {
+        margin-bottom: 30px;
+      }
+
+      h5 {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 28px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 22px;
+        color: var(--dark-grey);
+      }
+
+      p + p {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  &-statuses {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  &-status {
+    padding: 8px 10px;
+    border-radius: 50px;
+    background: var(--light-blue);
+
+    a {
+      font-size: 12px;
+      line-height: 17px;
+      color: var(--white);
+    }
+  }
+
+  &-more {
+    padding: 15px;
+    margin: 40px auto 0;
+    @media(min-width: 768px) {
+      max-width: 240px;
+    }
+  }
+}

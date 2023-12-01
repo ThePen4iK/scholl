@@ -5,6 +5,7 @@
   min-height: 100%;
   position: relative;
   z-index: 1;
+
   &__bg {
     position: absolute;
     top: 0;
@@ -14,7 +15,17 @@
     z-index: -1;
     object-fit: cover;
   }
+
   > main {
     flex: 1 1 auto;
+  }
+
+  &--default {
+    @media(min-width: 1240px) {
+      display: grid;
+      grid-template-areas: "left-sidebar main-view" "left-sidebar footer-view";
+      grid-template-columns: auto 1fr;
+      grid-template-rows: 1fr auto;
+    }
   }
 }

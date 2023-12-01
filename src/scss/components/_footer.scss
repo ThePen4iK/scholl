@@ -1,2 +1,33 @@
 .footer {
+  padding: 100px 0 20px;
+  @media(min-width: 1240px) {
+    grid-area: footer-view;
+    padding: 150px 0 30px;
+  }
+
+  &__wrapper {
+    padding-top: 20px;
+    border-top: 1px solid var(--light-grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media(min-width: 1240px){
+      padding-top: 30px;
+    }
+  }
+
+  &-copyright {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19px;
+    color: var(--grey);
+
+    a {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 19px;
+      text-decoration: underline;
+      color: var(--blue);
+    }
+  }
 }

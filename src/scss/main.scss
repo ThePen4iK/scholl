@@ -13,12 +13,15 @@
 @import 'layout/base-layout';
 
 // 5. Components ui
-@import 'components/ui/btn';
+@import 'components/UI/btn';
+@import 'components/UI/select';
+@import 'components/UI/tabs';
 @import 'components/UI/menu';
 @import 'components/UI/burger';
 
 // 6. All Components
 @import 'components/header';
 @import 'components/hero';
+@import 'components/news';
 @import 'components/footer';
 //styleName: Text/text 5;
