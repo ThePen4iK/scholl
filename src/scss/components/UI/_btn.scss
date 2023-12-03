@@ -10,7 +10,7 @@
   font-weight: 500;
   line-height: 22px;
   transition: all 0.3s ease;
-
+  padding: 15px;
   &:disabled {
     background: var(--grey);
     color: var(--dark-grey);
