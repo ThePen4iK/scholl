@@ -16,6 +16,9 @@
         flex-direction: row;
         gap: 40px;
         margin-top: 0;
+
+        width: 100%;
+        max-width: 460px;
       }
 
       &-title {
@@ -40,6 +43,12 @@
   }
 
   &-tabs {
+    &__list {
+      @media(min-width: 1240px){
+        width: 100%;
+        max-width: 665px;
+      }
+    }
     &.active {
       .tabs-btn {
         transition: all 0.3s ease;
